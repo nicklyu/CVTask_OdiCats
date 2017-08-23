@@ -8,11 +8,14 @@
 
 
 
-#### Выборка, подготовленная Ильей
+#### Предварительная выборка
   * [Зеленые светофоры](https://drive.google.com/drive/folders/0B3fRcmqWqN0sczA5T2VkTlgwZ0U)
   * [Красные светофоры](https://drive.google.com/drive/folders/0B3fRcmqWqN0sQzJLWnYtaGtvd3c)
   * [Без светофоров](https://drive.google.com/drive/folders/0B3fRcmqWqN0sN3Zkem5kdjZFRVU)
-
+  
+#### Обучающая выборка
+  * [Зеленые светофоры](https://drive.google.com/drive/folders/0B7QqEdYg-_31LWI5QzRxRmRMb28)
+  * Красные светофоры
 
 ### CNN
 ##### Подготовка данных: [create_data.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/create_data.py)

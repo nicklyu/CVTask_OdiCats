@@ -26,6 +26,13 @@
 * *height* - Высота конечного изображения
 * *weight* - Ширина конечного изображения
 
+##### Изменение расширений изображений в выборке: [extension_changer.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/extension_changer.py)
+Для запуска используется команда `python extension_changer.py directory target_directory from_ex to_ex`
+* *directory* - Имя директории с данными
+* *target_directory* - Имя директории для сохранения
+* *from_ex* - Исходное расширение
+* *to_ex* - Расширение после преобразования
+
 ##### Обучение классификатора: [train_model.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/train_model.py)
 Для запуска используется команда `python train_model.py red_dir green_dir extension epochs`
 * *red_dir* - Имя директории с красными светофорами

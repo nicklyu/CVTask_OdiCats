@@ -15,7 +15,7 @@
   
 #### Обучающая выборка
   * [Зеленые светофоры](https://drive.google.com/drive/folders/0B7QqEdYg-_31LWI5QzRxRmRMb28)
-  * Красные светофоры
+  * [Красные светофоры](https://drive.google.com/drive/folders/0B3fRcmqWqN0sREtLMlNwU0Rzb1E)
 
 ### CNN
 ##### Подготовка данных: [create_data.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/create_data.py)

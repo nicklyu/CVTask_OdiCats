@@ -58,6 +58,14 @@ def create_model(x, y):
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.25))
 
+    model.add(Conv2D(64, (3, 3), padding='same'))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Dropout(0.25))
+
+
     model.add(Flatten())
     model.add(Dense(512))
     model.add(Activation('relu'))
@@ -72,7 +80,6 @@ def create_model(x, y):
                   metrics=['accuracy'])
     return x_train, x_test, y_train, y_test, model
 
-print sys.argv
 if len(sys.argv) != 5:
     print('Illegal args number')
     sys.exit()
@@ -90,4 +97,4 @@ model.fit(x_train, y_train,
 
 model.save('cnn_classifier.h5')
 
-print('Accuracy: '+str(accuracy_score(y_test[:,1], model.predict_classes(x_test))))
+print('\nAccuracy: '+str(accuracy_score(y_test[:,1], model.predict_classes(x_test))))

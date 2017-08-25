@@ -1,5 +1,5 @@
 import os
-
+import sys
 import cv2
 
 
@@ -12,10 +12,15 @@ def augmentate_set(directory, out, prefix):
     :return: Void. Also, produces augmented frames to output directory
     """
     imgs = os.listdir(directory)
+
+    if not os.path.exists(out):
+        os.makedirs(out)
+
     for img in imgs:
         frame = cv2.imread(directory + '/' + img)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         augmentate_frame(frame, out, prefix)
+    print(str(len(os.listdir(out)))+' images created')
 
 
 def augmentate_frame(frame, output, prefix):
@@ -39,3 +44,8 @@ def augmentate_frame(frame, output, prefix):
             break
 
 
+if len(sys.argv) != 4:
+    print('Illegal args number')
+    sys.exit()
+
+augmentate_set(directory=sys.argv[1], out=sys.argv[2], prefix=sys.argv[3])

@@ -33,6 +33,12 @@
 * *from_ex* - Исходное расширение
 * *to_ex* - Расширение после преобразования
 
+##### Аугментация данных: [data_augmentator.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/data_augmentator.py)
+Для запуска используется команда `python data_augmentator.py directory target_directory prefix`
+* *directory* - Имя директории с данными
+* *target_directory* - Имя директории для сохранения
+* *prefix* - Префикс перед именем изображения
+
 ##### Обучение классификатора: [train_model.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/train_model.py)
 Для запуска используется команда `python train_model.py red_dir green_dir extension epochs`
 * *red_dir* - Имя директории с красными светофорами

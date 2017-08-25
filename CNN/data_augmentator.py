@@ -13,16 +13,14 @@ def augmentate_set(directory, out, prefix):
     """
     imgs = os.listdir(directory)
     for img in imgs:
-        f = img[(img).rfind('.'):]
         frame = cv2.imread(directory + '/' + img)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        augmentate_frame(frame, out, prefix, f)
+        augmentate_frame(frame, out, prefix)
 
 
-def augmentate_frame(frame, output, prefix, f):
+def augmentate_frame(frame, output, prefix):
     """
     augmentates frame
-    :param f: format of image to save
     :param frame: frame to augmentate  
     :param output: output directory
     :param prefix: prefix to save
@@ -34,9 +32,10 @@ def augmentate_frame(frame, output, prefix, f):
                                  )
     i = 0
     for batch in datagen.flow(f, batch_size=1, save_to_dir=output,
-                              save_format=f,
+                              save_format='jpeg',
                               save_prefix=prefix, ):
         i += 1
         if i > 2:
             break
+
 

@@ -19,12 +19,12 @@
 
 ### CNN
 ##### Подготовка данных: [create_data.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/create_data.py)
-Для запуска используется команда `python create_data.py directory target_directory extension height weight`
+Для запуска используется команда `python create_data.py directory target_directory extension weight height`
 * *directory* - Имя директории с данными
 * *target_directory* - Имя директории для сохранения
 * *extension* - Расширение изображений
-* *height* - Высота конечного изображения
 * *weight* - Ширина конечного изображения
+* *height* - Высота конечного изображения
 
 ##### Изменение расширений изображений в выборке: [extension_changer.py](https://github.com/nicklyu/CVTask_OdiCats/blob/master/CNN/extension_changer.py)
 Для запуска используется команда `python extension_changer.py directory target_directory from_ex to_ex`
